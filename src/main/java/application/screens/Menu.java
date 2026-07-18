@@ -1,5 +1,7 @@
 package application.screens;
 
+import domain.UserInterface;
+import domain.interfaces.Drawable;
 import domain.interfaces.GameEngine;
 import domain.interfaces.Renderer;
 import domain.shapes.Rectangle;
@@ -7,9 +9,14 @@ import domain.valueobjects.Colors;
 import domain.valueobjects.Position;
 import domain.valueobjects.Size;
 
+import java.util.ArrayList;
+
 public class Menu extends Screen {
+    private UserInterface ui;
+
     public Menu(GameEngine engine) {
         super(engine);
+        ui = new UserInterface();
     }
 
     @Override
@@ -19,6 +26,6 @@ public class Menu extends Screen {
 
     @Override
     public void draw() {
-        renderer.RenderRectangle(new Rectangle(Position.with(0,0), Size.with(120,120), Colors.ORANGE));
+        engine.updateScreen(ui.items());
     }
 }

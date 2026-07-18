@@ -1,10 +1,12 @@
 package domain.shapes;
 
+import domain.interfaces.Drawable;
+import domain.interfaces.Renderer;
 import domain.valueobjects.Colors;
 import domain.valueobjects.Position;
 import domain.valueobjects.Size;
 
-public class Rectangle {
+public class Rectangle implements Drawable {
     private Position position;
     private Size size;
     private Colors color;
@@ -20,5 +22,10 @@ public class Rectangle {
 
     public Colors color() {
         return color;
+    }
+
+    @Override
+    public void draw(Renderer renderer) {
+        renderer.RenderRectangle(this);
     }
 }

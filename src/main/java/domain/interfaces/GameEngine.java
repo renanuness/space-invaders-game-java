@@ -1,10 +1,11 @@
 package domain.interfaces;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface GameEngine {
     void setup();
-    void updateScreen(ArrayList<Drawable> drawables);
+    void updateScreen(List<Drawable> drawables);
     boolean windowShouldClose();
     void clenup();
     float deltaTime();

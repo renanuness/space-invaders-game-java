@@ -1,5 +1,6 @@
 package application;
 
+import application.screens.InGame;
 import application.screens.Menu;
 import domain.Spaceship;
 import domain.interfaces.GameEngine;
@@ -16,11 +17,10 @@ public class Game {
     private GameScreen currentScreen;
     private GameEngine engine;
 
-
     public Game(InfraProvider infraProvider) {
         this.engine = infraProvider.getEngine();
-        currentScreen = new Menu(this.engine);
-
+        //currentScreen = new Menu(this.engine);
+        currentScreen = new InGame(this.engine);
     }
 
     public void setup(){

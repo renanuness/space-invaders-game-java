@@ -5,10 +5,9 @@ import domain.interfaces.GameScreen;
 import domain.interfaces.Renderer;
 
 public abstract class Screen implements GameScreen {
-    protected Renderer renderer;
-
+    protected GameEngine engine;
 
     public Screen(GameEngine engine) {
-        this.renderer = engine.renderer();
+        this.engine = engine;
     }
 }

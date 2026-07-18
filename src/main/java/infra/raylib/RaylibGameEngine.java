@@ -5,7 +5,7 @@ import domain.interfaces.AbstractGameEngine;
 import domain.interfaces.Drawable;
 import domain.interfaces.Renderer;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import static com.raylib.Colors.RAYWHITE;
 import static com.raylib.Raylib.*;
@@ -26,7 +26,7 @@ public class RaylibGameEngine extends AbstractGameEngine {
     }
 
     @Override
-    public void updateScreen(ArrayList<Drawable> drawables) {
+    public void updateScreen(List<Drawable> drawables) {
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
