@@ -1,4 +1,4 @@
-package domain;
+package domain.interfaces;
 
 import domain.shapes.Rectangle;
 

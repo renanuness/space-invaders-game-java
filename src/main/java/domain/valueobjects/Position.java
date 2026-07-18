@@ -16,4 +16,9 @@ public class Position {
 
     public float x() { return x; }
     public float y() { return y; }
+
+    public void move(Displacement d) {
+        x += x();
+        y += y();
+    }
 }
