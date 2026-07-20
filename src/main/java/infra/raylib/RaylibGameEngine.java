@@ -2,6 +2,7 @@ package infra.raylib;
 
 import domain.GameSettings;
 import domain.interfaces.AbstractGameEngine;
+import domain.interfaces.Controller;
 import domain.interfaces.Drawable;
 import domain.interfaces.Renderer;
 
@@ -14,15 +15,15 @@ import static com.raylib.Raylib.EndDrawing;
 public class RaylibGameEngine extends AbstractGameEngine {
     protected GameSettings settings;
 
-    public RaylibGameEngine(GameSettings gameSetings, Renderer renderer) {
-        super(renderer);
+    public RaylibGameEngine(GameSettings gameSetings, Renderer renderer, Controller controller) {
+        super(renderer, controller);
         settings = gameSetings;
     }
 
     @Override
     public void setup() {
         InitWindow(settings.screenSize().width(), settings.screenSize().height(), settings.title());
-        SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+        SetTargetFPS(60);
     }
 
     @Override

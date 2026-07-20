@@ -1,17 +1,9 @@
 package application;
 
 import application.screens.InGame;
-import application.screens.Menu;
-import domain.Spaceship;
 import domain.interfaces.GameEngine;
-import domain.interfaces.Drawable;
 import domain.interfaces.GameScreen;
 import domain.interfaces.InfraProvider;
-import domain.valueobjects.Colors;
-import domain.valueobjects.Position;
-import domain.valueobjects.Size;
-
-import java.util.ArrayList;
 
 public class Game {
     private GameScreen currentScreen;
@@ -40,5 +32,9 @@ public class Game {
 
     public void cleanup() {
         engine.clenup();
+    }
+
+    public void readInputs() {
+
     }
 }

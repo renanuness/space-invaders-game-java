@@ -10,7 +10,6 @@ public class Main {
         game.setup();
         while (game.isRunning())
         {
-
             game.update();
             game.draw();
         }
