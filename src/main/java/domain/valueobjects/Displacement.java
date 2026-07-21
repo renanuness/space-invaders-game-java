@@ -10,5 +10,5 @@ public class Displacement {
     }
 
     public float x(){ return x; }
-    public float y(){ return y(); }
+    public float y(){ return y; }
 }
