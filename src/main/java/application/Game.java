@@ -35,6 +35,6 @@ public class Game {
     }
 
     public void readInputs() {
-
+        engine.controller().readInputs();
     }
 }

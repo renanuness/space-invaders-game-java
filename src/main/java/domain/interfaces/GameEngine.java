@@ -1,6 +1,7 @@
 package domain.interfaces;
 
-import java.util.ArrayList;
+import domain.commands.Command;
+
 import java.util.List;
 
 public interface GameEngine {
@@ -10,6 +11,7 @@ public interface GameEngine {
     void clenup();
     float deltaTime();
     Renderer renderer();
+    Controller controller();
 }
 
 
